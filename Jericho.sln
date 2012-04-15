@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jericho.MVC", "Jericho.MVC\Jericho.MVC.csproj", "{BC39A33F-D077-4483-B0F2-07A5C90F9F08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jericho.Core", "Jericho.Core\Jericho.Core.csproj", "{3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jericho.CompositionRoot", "Jericho.CompositionRoot\Jericho.CompositionRoot.csproj", "{BD583F93-17C8-4BE5-97A5-CE5F070A1DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jericho.Nhibernate", "Jericho.Nhibernate\Jericho.Nhibernate.csproj", "{BE8EE06C-84D6-4415-B5D1-CDA12E05FE55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{95E6A84F-46B3-431D-B0DD-1AD9DA6CBC75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{7863996F-FE54-4E0A-8915-F1EE3BBB67AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{E0A59FA9-8BD6-4BDB-AF1A-3C46189283F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC39A33F-D077-4483-B0F2-07A5C90F9F08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC39A33F-D077-4483-B0F2-07A5C90F9F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC39A33F-D077-4483-B0F2-07A5C90F9F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC39A33F-D077-4483-B0F2-07A5C90F9F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD583F93-17C8-4BE5-97A5-CE5F070A1DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD583F93-17C8-4BE5-97A5-CE5F070A1DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD583F93-17C8-4BE5-97A5-CE5F070A1DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD583F93-17C8-4BE5-97A5-CE5F070A1DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE8EE06C-84D6-4415-B5D1-CDA12E05FE55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE8EE06C-84D6-4415-B5D1-CDA12E05FE55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE8EE06C-84D6-4415-B5D1-CDA12E05FE55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE8EE06C-84D6-4415-B5D1-CDA12E05FE55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE8EE06C-84D6-4415-B5D1-CDA12E05FE55} = {95E6A84F-46B3-431D-B0DD-1AD9DA6CBC75}
+		{BD583F93-17C8-4BE5-97A5-CE5F070A1DCB} = {95E6A84F-46B3-431D-B0DD-1AD9DA6CBC75}
+		{3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6} = {7863996F-FE54-4E0A-8915-F1EE3BBB67AC}
+		{BC39A33F-D077-4483-B0F2-07A5C90F9F08} = {E0A59FA9-8BD6-4BDB-AF1A-3C46189283F6}
+	EndGlobalSection
+EndGlobal

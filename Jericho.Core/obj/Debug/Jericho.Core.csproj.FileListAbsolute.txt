@@ -1,0 +1,5 @@
+C:\Development\Jericho\Jericho.Core\bin\Debug\Jericho.Core.dll
+C:\Development\Jericho\Jericho.Core\bin\Debug\Jericho.Core.pdb
+C:\Development\Jericho\Jericho.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Jericho\Jericho.Core\obj\Debug\Jericho.Core.dll
+C:\Development\Jericho\Jericho.Core\obj\Debug\Jericho.Core.pdb

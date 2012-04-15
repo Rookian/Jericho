@@ -1,0 +1,5 @@
+C:\Development\Jericho\Jericho.Nhibernate\bin\Debug\Jericho.Nhibernate.dll
+C:\Development\Jericho\Jericho.Nhibernate\bin\Debug\Jericho.Nhibernate.pdb
+C:\Development\Jericho\Jericho.Nhibernate\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Jericho\Jericho.Nhibernate\obj\Debug\Jericho.Nhibernate.dll
+C:\Development\Jericho\Jericho.Nhibernate\obj\Debug\Jericho.Nhibernate.pdb

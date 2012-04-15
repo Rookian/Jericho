@@ -1,0 +1,5 @@
+C:\Development\Jericho\Jericho.CompositionRoot\bin\Debug\Jericho.CompositionRoot.dll
+C:\Development\Jericho\Jericho.CompositionRoot\bin\Debug\Jericho.CompositionRoot.pdb
+C:\Development\Jericho\Jericho.CompositionRoot\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\Jericho\Jericho.CompositionRoot\obj\Debug\Jericho.CompositionRoot.dll
+C:\Development\Jericho\Jericho.CompositionRoot\obj\Debug\Jericho.CompositionRoot.pdb
