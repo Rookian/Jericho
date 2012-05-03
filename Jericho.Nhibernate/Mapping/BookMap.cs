@@ -15,4 +15,6 @@ namespace Jericho.Nhibernate.Mapping
             Map(p => p.Isbn);
         }
     }
+
+
 }

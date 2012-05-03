@@ -1,64 +1,52 @@
 ﻿using System;
 using Jericho.Core;
-using Jericho.Nhibernate.Session;
 using NHibernate;
 
 namespace Jericho.Nhibernate.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly ISessionBuilder _sessionBuilder;
+        readonly ISession _session;
 
-        public UnitOfWork(ISessionBuilder sessionBuilder)
+        public UnitOfWork(ISession session)
         {
-            _sessionBuilder = sessionBuilder;
+            _session = session;
         }
 
         public void Begin()
         {
             if (ThereIsATransactionInProgress())
             {
-                GetTransaction().Dispose();
+                _session.Transaction.Dispose();
             }
 
-            GetSession().BeginTransaction();
+            _session.BeginTransaction();
         }
 
         public void RollBack()
         {
-            if (GetTransaction().IsActive)
+            if (_session.Transaction.IsActive)
             {
-                GetTransaction().Rollback();
+                _session.Transaction.Rollback();
             }
-        }
-
-        public void Dispose()
-        {
-            GetSession().Dispose();
         }
 
         public void Commit()
         {
-            var transaction = GetTransaction();
-            if (!transaction.IsActive)
-                throw new InvalidOperationException("Must call Start() on the unit of work before committing");
+            var transaction = _session.Transaction;
+            if (!transaction.IsActive) throw new InvalidOperationException("Must call Begin() on the unit of work before committing");
 
             transaction.Commit();
         }
 
-        private ISession GetSession()
+        public void Dispose()
         {
-            return _sessionBuilder.GetSession();
-        }
-
-        private ITransaction GetTransaction()
-        {
-            return GetSession().Transaction;
+            _session.Dispose();
         }
 
         private bool ThereIsATransactionInProgress()
         {
-            return GetTransaction().IsActive || GetTransaction().WasCommitted || GetTransaction().WasRolledBack;
+            return _session.Transaction.IsActive || _session.Transaction.WasCommitted || _session.Transaction.WasRolledBack;
         }
     }
 }

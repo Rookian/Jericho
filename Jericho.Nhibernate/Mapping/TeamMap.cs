@@ -12,16 +12,6 @@ namespace Jericho.Nhibernate.Mapping
                 .GeneratedBy.Identity();
 
             Map(p => p.Name);
-
-            //HasManyToMany(p => p.GetEmployees())
-            //    .Access.CamelCaseField(Prefix.Underscore)
-            //    .Table("TeamEmployee")
-            //    .ParentKeyColumn("TeamId")
-            //    .ChildKeyColumn("EmployeeId")
-            //    .LazyLoad()
-            //    .AsSet()
-            //    .Inverse()
-            //    .Cascade.SaveUpdate();
         }
     }
 }

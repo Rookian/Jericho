@@ -33,13 +33,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnitOfWorkFactory.cs" />
+    <Compile Include="AbstractFactoryBase.cs" />
     <Compile Include="Domain\Book.cs" />
     <Compile Include="Domain\DiscriminatorValue.cs" />
     <Compile Include="Domain\DomainModelHelper.cs" />

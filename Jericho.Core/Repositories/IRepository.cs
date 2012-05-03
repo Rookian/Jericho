@@ -8,6 +8,5 @@ namespace Jericho.Core.Repositories
         T[] GetAll();
         T GetById(object id);
         void SaveOrUpdate(T enity);
-        void Merge(T entity);
     }
 }

@@ -16,20 +16,9 @@ namespace Jericho.Nhibernate.Mapping
             Map(p => p.LastName);
             Map(p => p.FirstName);
             Map(p => p.Infos).Not.Nullable();
-            Map(p => p.Count);
-            Map(p => p.IsCool).Not.Nullable();
-            //HasManyToMany(p => p.GetTeams())
-            //    .Access.CamelCaseField(Prefix.Underscore)
-            //    .Table("TeamEmployee")
-            //    .ParentKeyColumn("EmployeeId")
-            //    .ChildKeyColumn("TeamId")
-            //    .LazyLoad()
-            //    .AsSet()
-            //    .Cascade.SaveUpdate();
-            
             
             HasMany(p => p.GetLoanedItems())
-                .Access.CamelCaseField(Prefix.Underscore)
+                .Access.CamelCaseField(Prefix.None)
                 .Cascade.SaveUpdate()
                 .KeyColumn("EmployeeId");
         }

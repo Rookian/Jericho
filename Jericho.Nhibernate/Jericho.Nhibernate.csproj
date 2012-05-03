@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\Jericho.MVC\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -56,12 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InstanceScoper\HttpContextInstanceScoper.cs" />
-    <Compile Include="InstanceScoper\HybridInstanceScoper.cs" />
-    <Compile Include="InstanceScoper\IInstanceScoper.cs" />
-    <Compile Include="InstanceScoper\InstanceScoperBase.cs" />
-    <Compile Include="InstanceScoper\SingletonInstanceScoper.cs" />
-    <Compile Include="InstanceScoper\ThreadStaticInstanceScoper.cs" />
     <Compile Include="Mapping\BookMap.cs" />
     <Compile Include="Mapping\EmployeeMap.cs" />
     <Compile Include="Mapping\LoanedItemMap.cs" />
@@ -76,10 +70,6 @@
     <Compile Include="Repositories\TeamEmployeeRepository.cs" />
     <Compile Include="Repositories\TeamRepository.cs" />
     <Compile Include="SessionFactory\ConfigurationFactory.cs" />
-    <Compile Include="SessionFactory\ISessionFactoryBuilder.cs" />
-    <Compile Include="SessionFactory\SessionFactoryBuilder.cs" />
-    <Compile Include="Session\ISessionBuilder.cs" />
-    <Compile Include="Session\SessionBuilder.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>

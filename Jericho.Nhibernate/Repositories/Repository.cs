@@ -1,18 +1,17 @@
 ﻿using System.Linq;
 using Jericho.Core.Domain;
 using Jericho.Core.Repositories;
-using Jericho.Nhibernate.Session;
 using NHibernate;
 
 namespace Jericho.Nhibernate.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : Entity
+    public abstract class Repository<T> : IRepository<T> where T : Entity
     {
         private readonly ISession _session;
 
-        protected Repository()
+        public Repository(ISession session)
         {
-            _session = GetSession();
+            _session = session;
         }
 
         public virtual void Delete(T entity)
@@ -33,16 +32,6 @@ namespace Jericho.Nhibernate.Repositories
         public virtual void SaveOrUpdate(T enity)
         {
             _session.SaveOrUpdate(enity);
-        }
-
-        public void Merge(T entity)
-        {
-            _session.Merge(entity);
-        }
-
-        protected ISession GetSession()
-        {
-            return new SessionBuilder().GetSession();
         }
     }
 }
