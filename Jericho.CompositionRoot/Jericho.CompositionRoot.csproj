@@ -41,8 +41,10 @@
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyRegistry.cs" />
+    <Compile Include="Registries\CommandProcessorRegistry.cs" />
+    <Compile Include="Registries\MVCRegistry.cs" />
     <Compile Include="DependencyRegistrarModule.cs" />
+    <Compile Include="Registries\NHibernateRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +53,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Jericho.CommandProcessor\Jericho.CommandProcessor.csproj">
+      <Project>{816841A1-E75C-480E-9843-E80555A40159}</Project>
+      <Name>Jericho.CommandProcessor</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Jericho.Core\Jericho.Core.csproj">
       <Project>{3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6}</Project>
       <Name>Jericho.Core</Name>

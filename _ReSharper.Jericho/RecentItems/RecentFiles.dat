@@ -1,66 +1,13 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/d:Domain/f:Entity.cs" caret="298" fromTop="11" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Repositories/f:Repository.cs" caret="273" fromTop="9" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Repositories/f:LoanedItemRepository.cs" caret="365" fromTop="11" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Repositories/f:TeamEmployeeRepository.cs" caret="0" fromTop="0" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:Global.asax" caret="100" fromTop="1" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:DepdencyResolver.cs" caret="364" fromTop="13" />
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/d:Domain/f:LoanedItem.cs" caret="274" fromTop="9" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:UnitOfWork/f:UnitOfWork.cs" caret="503" fromTop="22" />
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/f:IUnitOfWork.cs" caret="112" fromTop="6" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Views/d:Shared/f:_Layout.cshtml" caret="981" fromTop="14" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:SessionFactory/f:ConfigurationFactory.cs" caret="453" fromTop="14" />
-    <File id="BD583F93-17C8-4BE5-97A5-CE5F070A1DCB/f:DependencyRegistry.cs" caret="693" fromTop="10" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:Web.config" caret="1148" fromTop="14" />
-    <File id="BD583F93-17C8-4BE5-97A5-CE5F070A1DCB/f:DependencyRegistrarModule.cs" caret="419" fromTop="7" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:Global.asax.cs" caret="1317" fromTop="11" />
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/f:UnitOfWorkFactory.cs" caret="0" fromTop="0" />
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/d:Domain/f:Employee.cs" caret="550" fromTop="14" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:TeamEmployeeMap.cs" caret="561" fromTop="19" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:MagazineMap.cs" caret="0" fromTop="0" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:LoanedItemMap.cs" caret="470" fromTop="1" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:EmployeeMap.cs" caret="551" fromTop="19" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:BookMap.cs" caret="149" fromTop="5" />
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/d:Repositories/f:IRepository.cs" caret="0" fromTop="0" />
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/d:Repositories/f:ILoanedItemRepository.cs" caret="0" fromTop="0" />
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/d:Repositories/f:IEmployeeRepository.cs" caret="151" fromTop="6" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Views/d:Home/f:Index.cshtml" caret="1743" fromTop="38" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:StructureMapControllerFactory.cs" caret="548" fromTop="15" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:UnitOfWorkModule.cs" caret="719" fromTop="16" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Controllers/f:HomeController.cs" caret="818" fromTop="16" />
+    <File id="816841A1-E75C-480E-9843-E80555A40159/f:ICommandHandler.cs" caret="234" fromTop="6" />
+    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
+    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Controllers/f:HomeController.cs" caret="837" fromTop="23" />
+    <File id="816841A1-E75C-480E-9843-E80555A40159/f:CommandInvoker.cs" caret="279" fromTop="10" />
   </RecentFiles>
   <RecentEdits>
-    <File id="BD583F93-17C8-4BE5-97A5-CE5F070A1DCB/f:DependencyRegistry.cs" caret="1064" fromTop="22" />
-    <File id="BD583F93-17C8-4BE5-97A5-CE5F070A1DCB/f:DependencyRegistry.cs" caret="679" fromTop="15" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Repositories/f:Repository.cs" caret="838" fromTop="19" />
-    <File id="3CEAC78B-5F5F-4F85-9E33-DDF6C26221C6/d:Repositories/f:IRepository.cs" caret="252" fromTop="9" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:UnitOfWork/f:UnitOfWork.cs" caret="698" fromTop="30" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:UnitOfWork/f:UnitOfWork.cs" caret="698" fromTop="35" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:UnitOfWork/f:UnitOfWork.cs" caret="943" fromTop="35" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:UnitOfWork/f:UnitOfWork.cs" caret="1068" fromTop="42" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:UnitOfWork/f:UnitOfWork.cs" caret="205" fromTop="0" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:DepdencyResolver.cs" caret="231" fromTop="7" />
-    <File id="BD583F93-17C8-4BE5-97A5-CE5F070A1DCB/f:DependencyRegistry.cs" caret="1358" fromTop="30" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:BookMap.cs" caret="423" fromTop="23" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:BookMap.cs" caret="423" fromTop="21" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:BookMap.cs" caret="423" fromTop="21" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:BookMap.cs" caret="401" fromTop="16" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:Mapping/f:BookMap.cs" caret="0" fromTop="0" />
-    <File id="BD583F93-17C8-4BE5-97A5-CE5F070A1DCB/f:DependencyRegistry.cs" caret="979" fromTop="21" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:Global.asax.cs" caret="1474" fromTop="28" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:Global.asax.cs" caret="1474" fromTop="26" />
-    <File id="BD583F93-17C8-4BE5-97A5-CE5F070A1DCB/f:DependencyRegistry.cs" caret="1200" fromTop="27" />
-    <File id="BE8EE06C-84D6-4415-B5D1-CDA12E05FE55/d:SessionFactory/f:ConfigurationFactory.cs" caret="730" fromTop="18" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Controllers/f:HomeController.cs" caret="968" fromTop="17" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:Web.config" caret="1148" fromTop="24" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:Web.config" caret="1602" fromTop="25" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:Web.config" caret="950" fromTop="12" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/f:UnitOfWorkModule.cs" caret="719" fromTop="22" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Controllers/f:HomeController.cs" caret="935" fromTop="18" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Controllers/f:HomeController.cs" caret="459" fromTop="14" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Controllers/f:HomeController.cs" caret="776" fromTop="18" />
-    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Controllers/f:HomeController.cs" caret="969" fromTop="25" />
+    <File id="BC39A33F-D077-4483-B0F2-07A5C90F9F08/d:Controllers/f:HomeController.cs" caret="681" fromTop="19" />
+    <File id="816841A1-E75C-480E-9843-E80555A40159/f:ICommandHandler.cs" caret="245" fromTop="7" />
+    <File id="816841A1-E75C-480E-9843-E80555A40159/f:CommandInvoker.cs" caret="42" fromTop="3" />
   </RecentEdits>
 </RecentFiles>

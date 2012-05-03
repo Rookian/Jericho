@@ -16,3 +16,8 @@ C:\Development\Jericho\Jericho.MVC\bin\Jericho.Nhibernate.pdb
 C:\Development\Jericho\Jericho.Nhibernate\obj\Debug\ResolveAssemblyReference.cache
 C:\Development\Jericho\Jericho.Nhibernate\obj\Debug\Jericho.Nhibernate.dll
 C:\Development\Jericho\Jericho.Nhibernate\obj\Debug\Jericho.Nhibernate.pdb
+C:\Development\LECOS\Code\Jericho\Jericho.MVC\bin\Jericho.Nhibernate.dll
+C:\Development\LECOS\Code\Jericho\Jericho.MVC\bin\Jericho.Nhibernate.pdb
+C:\Development\LECOS\Code\Jericho\Jericho.Nhibernate\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\LECOS\Code\Jericho\Jericho.Nhibernate\obj\Debug\Jericho.Nhibernate.dll
+C:\Development\LECOS\Code\Jericho\Jericho.Nhibernate\obj\Debug\Jericho.Nhibernate.pdb

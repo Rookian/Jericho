@@ -1,32 +1,15 @@
-﻿using System;
-using System.Web.Mvc;
-using Jericho.Core;
+﻿using System.Web.Mvc;
 using Jericho.Core.Repositories;
 
 namespace Jericho.MVC.Controllers
 {
     public class HomeController : Controller
     {
-        readonly ITeamEmployeeRepository _teamEmployeeRepository;
-        readonly ITeamRepository _teamRepository;
+        readonly IEmployeeRepository _employeeRepository;
 
-        public HomeController(ITeamEmployeeRepository teamEmployeeRepository, ITeamRepository teamRepository)
+        public HomeController(IEmployeeRepository employeeRepository)
         {
-            using (var unitOfWork = UnitOfWorkFactory.GetDefault())
-            {
-                unitOfWork.Begin();
-                try
-                {
-                    _teamEmployeeRepository = teamEmployeeRepository;
-                    _teamRepository = teamRepository;
-                    throw new Exception("Dies ist ein Test");
-                    unitOfWork.Commit();
-                }
-                catch (Exception)
-                {
-                    unitOfWork.RollBack();
-                }
-            }
+            _employeeRepository = employeeRepository;
         }
 
         public ActionResult Index()

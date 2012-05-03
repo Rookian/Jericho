@@ -35,6 +35,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CreateOrUpdateEmployee.cs" />
+    <Compile Include="Commands\CreateOrUpdateEmployeeMessage.cs" />
+    <Compile Include="Commands\Error.cs" />
+    <Compile Include="Commands\ExecutionResult.cs" />
+    <Compile Include="Commands\ICommandHandler.cs" />
+    <Compile Include="Commands\ICommandMessage.cs" />
+    <Compile Include="Commands\ICommandProcessor.cs" />
     <Compile Include="UnitOfWorkFactory.cs" />
     <Compile Include="AbstractFactoryBase.cs" />
     <Compile Include="Domain\Book.cs" />

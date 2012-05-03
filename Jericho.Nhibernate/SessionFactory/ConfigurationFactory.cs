@@ -2,7 +2,6 @@
 using FluentNHibernate.Cfg.Db;
 using Jericho.Nhibernate.Mapping;
 using NHibernate.Cfg;
-using NHibernate.Tool.hbm2ddl;
 
 namespace Jericho.Nhibernate.SessionFactory
 {

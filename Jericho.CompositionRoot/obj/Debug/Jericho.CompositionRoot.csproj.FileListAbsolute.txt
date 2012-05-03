@@ -20,3 +20,8 @@ C:\Development\Jericho\Jericho.MVC\bin\Jericho.CompositionRoot.pdb
 C:\Development\Jericho\Jericho.CompositionRoot\obj\Debug\ResolveAssemblyReference.cache
 C:\Development\Jericho\Jericho.CompositionRoot\obj\Debug\Jericho.CompositionRoot.dll
 C:\Development\Jericho\Jericho.CompositionRoot\obj\Debug\Jericho.CompositionRoot.pdb
+C:\Development\LECOS\Code\Jericho\Jericho.CompositionRoot\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\LECOS\Code\Jericho\Jericho.MVC\bin\Jericho.CompositionRoot.dll
+C:\Development\LECOS\Code\Jericho\Jericho.MVC\bin\Jericho.CompositionRoot.pdb
+C:\Development\LECOS\Code\Jericho\Jericho.CompositionRoot\obj\Debug\Jericho.CompositionRoot.dll
+C:\Development\LECOS\Code\Jericho\Jericho.CompositionRoot\obj\Debug\Jericho.CompositionRoot.pdb

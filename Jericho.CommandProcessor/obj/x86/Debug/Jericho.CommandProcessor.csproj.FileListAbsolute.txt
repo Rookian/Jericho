@@ -1,0 +1,7 @@
+C:\Development\LECOS\Code\Jericho\Jericho.CommandProcessor\bin\Debug\Jericho.CommandProcessor.dll
+C:\Development\LECOS\Code\Jericho\Jericho.CommandProcessor\bin\Debug\Jericho.CommandProcessor.pdb
+C:\Development\LECOS\Code\Jericho\Jericho.CommandProcessor\bin\Debug\Jericho.Core.dll
+C:\Development\LECOS\Code\Jericho\Jericho.CommandProcessor\bin\Debug\Jericho.Core.pdb
+C:\Development\LECOS\Code\Jericho\Jericho.CommandProcessor\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Development\LECOS\Code\Jericho\Jericho.CommandProcessor\obj\x86\Debug\Jericho.CommandProcessor.dll
+C:\Development\LECOS\Code\Jericho\Jericho.CommandProcessor\obj\x86\Debug\Jericho.CommandProcessor.pdb
