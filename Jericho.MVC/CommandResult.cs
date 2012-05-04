@@ -4,7 +4,9 @@ using Jericho.Core.Commands;
 
 namespace Jericho.MVC
 {
-    public class CommandResult<TInput, TResult> : CommandResult where TInput : ICommandMessage where TResult : class
+    public class CommandResult<TInput, TResult> : CommandResult
+        where TInput : ICommandMessage
+        where TResult : class
     {
         private readonly TInput _message;
         private readonly Func<TResult, ActionResult> _success;

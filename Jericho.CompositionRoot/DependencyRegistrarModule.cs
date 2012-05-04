@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Jericho.CompositionRoot.Registries;
@@ -29,17 +28,15 @@ namespace Jericho.CompositionRoot
                     if (!_dependenciesRegistered)
                     {
                         ObjectFactory.ResetDefaults();
-                        ObjectFactory.Initialize(x => GetStructureMapRegistries().ForEach(x.AddRegistry));
+                        ObjectFactory.Initialize(init => typeof(MVCRegistry).Assembly.GetTypes()
+                                                        .Where(type => typeof(Registry).IsAssignableFrom(type))
+                                                        .Select(Activator.CreateInstance)
+                                                        .Cast<Registry>().ToList()
+                                                        .ForEach(init.AddRegistry));
                         _dependenciesRegistered = true;
                     }
                 }
             }
-        }
-
-        private static List<Registry> GetStructureMapRegistries()
-        {
-            var types = typeof(MVCRegistry).Assembly.GetTypes().Where(x => typeof(Registry).IsAssignableFrom(x)).ToList();
-            return types.Select(Activator.CreateInstance).Cast<Registry>().ToList();
         }
     }
 }

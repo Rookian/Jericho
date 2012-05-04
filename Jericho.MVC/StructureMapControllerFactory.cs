@@ -6,7 +6,7 @@ namespace Jericho.MVC
 {
     public class StructureMapControllerFactory : DefaultControllerFactory
     {
-        public static Func<Type, Controller> CreateControllerInstance = type =>
+        public static Func<Type, object> CreateControllerInstance = type =>
         {
             throw new InvalidOperationException("The dependency callback for the StructureMapControllerFactory is not configured!");
         };
@@ -17,7 +17,7 @@ namespace Jericho.MVC
             {
                 return base.GetControllerInstance(requestContext, controllerType);
             }
-            return CreateControllerInstance(controllerType);
+            return CreateControllerInstance(controllerType) as Controller;
         }
     }
 }

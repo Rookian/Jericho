@@ -40,7 +40,7 @@ namespace Jericho.MVC
             RegisterRoutes(RouteTable.Routes);
 
             ControllerBuilder.Current.SetControllerFactory(new StructureMapControllerFactory());
-
+            DependencyResolver.SetResolver(new StructureMapDependencyResolver());
             BundleTable.Bundles.RegisterTemplateBundles();
         }
     }

@@ -1,25 +1,25 @@
 ﻿using System.Web.Mvc;
-using Jericho.Core.Repositories;
+using Jericho.Core;
+using Jericho.Core.Commands;
+using Jericho.Core.Commands.CommandMessages;
 
 namespace Jericho.MVC.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : CommandController
     {
-        readonly IEmployeeRepository _employeeRepository;
-
-        public HomeController(IEmployeeRepository employeeRepository)
+        public HomeController(ICommandProcessor commandProcessor, IUnitOfWork unitOfWork) : base(commandProcessor, unitOfWork)
         {
-            _employeeRepository = employeeRepository;
         }
 
         public ActionResult Index()
         {
-            return View();
+            var createOrUpdateEmployeeMessage = new CreateOrUpdateEmployeeMessage { EMail = "a", FirstName = "f", Infos = "", Id = 0, LastName = "l" };
+
+            return Command(createOrUpdateEmployeeMessage, s => View());
         }
 
         public ActionResult About()
         {
-
             return View();
         }
 

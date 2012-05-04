@@ -35,15 +35,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\CreateOrUpdateEmployee.cs" />
-    <Compile Include="Commands\CreateOrUpdateEmployeeMessage.cs" />
+    <Compile Include="Commands\CommandHandlers\CreateOrUpdateEmployee.cs" />
+    <Compile Include="Commands\CommandMessages\CreateOrUpdateEmployeeMessage.cs" />
     <Compile Include="Commands\Error.cs" />
     <Compile Include="Commands\ExecutionResult.cs" />
     <Compile Include="Commands\ICommandHandler.cs" />
     <Compile Include="Commands\ICommandMessage.cs" />
     <Compile Include="Commands\ICommandProcessor.cs" />
-    <Compile Include="UnitOfWorkFactory.cs" />
-    <Compile Include="AbstractFactoryBase.cs" />
     <Compile Include="Domain\Book.cs" />
     <Compile Include="Domain\DiscriminatorValue.cs" />
     <Compile Include="Domain\DomainModelHelper.cs" />
@@ -67,7 +65,6 @@
     <Compile Include="Repositories\ITeamEmployeeRepository.cs" />
     <Compile Include="Repositories\ITeamRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

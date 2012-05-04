@@ -4,7 +4,6 @@ using Jericho.Nhibernate.Repositories;
 using Jericho.Nhibernate.SessionFactory;
 using Jericho.Nhibernate.UnitOfWork;
 using NHibernate;
-using StructureMap;
 using StructureMap.Configuration.DSL;
 
 namespace Jericho.CompositionRoot.Registries
@@ -15,9 +14,12 @@ namespace Jericho.CompositionRoot.Registries
         {
             // UnitOfWork
             For<IUnitOfWork>().Use<UnitOfWork>();
+            SetAllProperties(x => x.OfType<IUnitOfWork>());
 
-            UnitOfWorkFactory.GetDefault = ObjectFactory.GetInstance<IUnitOfWork>;
+            // wird nicht mehr benötigt
+            //UnitOfWorkFactory.GetDefault = ObjectFactory.GetInstance<IUnitOfWork>;
             var sessionFactory = new ConfigurationFactory().Build().BuildSessionFactory();
+
             For<ISessionFactory>().Singleton().Use(sessionFactory);
 
             For<ISession>().HttpContextScoped().Use(ctx =>

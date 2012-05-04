@@ -16,8 +16,10 @@ namespace Jericho.CommandProcessor
 
         public ExecutionResult Process<TCommandMessage>(TCommandMessage commandMessage) where TCommandMessage : ICommandMessage
         {
-            // vorher könnte noch geprüft werden ob der Command überhaupt ausgeführt werden soll bevor er ausgeführt wird (Validierung)
+            // vorher könnte noch geprüft werden ob der Command überhaupt ausgeführt werden soll 
+            // (Validierung) neben der bereits durchgeführten ModelState.IsValid Prüfung, bspw. Prüfung auf Unique Name in der DB
             var executionResult = _commandInvoker.Process(commandMessage);
+            
             if (!executionResult.Successful)
             {
                 _unitOfWork.RollBack();

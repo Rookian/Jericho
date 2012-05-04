@@ -1,5 +1,4 @@
-﻿using System;
-using Jericho.Core;
+﻿using Jericho.Core;
 using NHibernate;
 
 namespace Jericho.Nhibernate.UnitOfWork
@@ -17,7 +16,7 @@ namespace Jericho.Nhibernate.UnitOfWork
         {
             if (ThereIsATransactionInProgress())
             {
-                _session.Transaction.Dispose();
+                GetTransaction().Dispose();
             }
 
             _session.BeginTransaction();
@@ -25,18 +24,17 @@ namespace Jericho.Nhibernate.UnitOfWork
 
         public void RollBack()
         {
-            if (_session.Transaction.IsActive)
+            if (GetTransaction().IsActive)
             {
-                _session.Transaction.Rollback();
+                GetTransaction().Rollback();
             }
         }
 
         public void Commit()
         {
-            var transaction = _session.Transaction;
-            if (!transaction.IsActive) throw new InvalidOperationException("Must call Begin() on the unit of work before committing");
+            if (!GetTransaction().IsActive) return; // Transaction was rolled back
 
-            transaction.Commit();
+            GetTransaction().Commit();
         }
 
         public void Dispose()
@@ -46,7 +44,12 @@ namespace Jericho.Nhibernate.UnitOfWork
 
         private bool ThereIsATransactionInProgress()
         {
-            return _session.Transaction.IsActive || _session.Transaction.WasCommitted || _session.Transaction.WasRolledBack;
+            return GetTransaction().IsActive || GetTransaction().WasCommitted || GetTransaction().WasRolledBack;
+        }
+
+        private ITransaction GetTransaction()
+        {
+            return _session.Transaction;
         }
     }
 }

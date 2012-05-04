@@ -24,12 +24,14 @@ namespace Jericho.CommandProcessor
             {
                 foreach (var commandHandler in commandHandlers)
                 {
+                    // Nur in dem jeweiligen Handler finden Datenänderungen statt
                     var result = commandHandler.Execute(commandMessage);
                     executionResult.SetExecutionResult(result);
                 }
             }
             catch (Exception exception)
             {
+                // Damit werden keine Änderungen in die DB geschrieben (UnitOfWork.Rollback wird später aufgerufen)
                 executionResult.Errors.Add(new Error { Exception = exception, ErrorMessage = exception.Message });
             }
 

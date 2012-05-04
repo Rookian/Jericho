@@ -1,4 +1,4 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
 using Jericho.MVC;
 using StructureMap;
 using StructureMap.Configuration.DSL;
@@ -9,7 +9,19 @@ namespace Jericho.CompositionRoot.Registries
     {
         public MVCRegistry()
         {
-            StructureMapControllerFactory.CreateControllerInstance = type => ObjectFactory.GetInstance<Controller>();
+            StructureMapControllerFactory.CreateControllerInstance = ObjectFactory.GetInstance;
+
+            StructureMapDependencyResolver.CreateService = type =>
+                                                               {
+                                                                   if (type.IsAbstract || type.IsInterface)
+                                                                   {
+                                                                       return ObjectFactory.TryGetInstance(type);
+                                                                   }
+                                                                   return ObjectFactory.GetInstance(type);
+                                                               };
+
+            StructureMapDependencyResolver.CreateServices = type => ObjectFactory.GetAllInstances<object>().Where(s => s.GetType() == type);
+            
         }
     }
 }
