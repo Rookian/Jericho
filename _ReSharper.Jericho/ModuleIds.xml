@@ -138,4 +138,5 @@
   <Module PersistentId="3C6A4946-3CD9-4B74-87C5-A06EF49920FA" ModuleId="StructureMap.AutoFactory_1" />
   <Module PersistentId="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.Core_1" />
   <Module PersistentId="StructureMap, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223" ModuleId="StructureMap_1" />
+  <Module PersistentId="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Web.Optimization_1" />
 </Modules>

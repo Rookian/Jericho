@@ -2,8 +2,6 @@
 using System.Linq;
 using System.Web;
 using Jericho.CompositionRoot.Registries;
-using Jericho.Core.Commands;
-using Jericho.Core.Commands.CommandMessages;
 using StructureMap;
 using StructureMap.Configuration.DSL;
 

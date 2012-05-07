@@ -13,9 +13,15 @@ namespace Jericho.MVC.Controllers
 
         public ActionResult Index()
         {
-            var createOrUpdateEmployeeMessage = new CreateOrUpdateEmployeeMessage { EMail = "a", FirstName = "f", Infos = "", Id = 0, LastName = "l" };
+            return View();
+        }
 
-            return Command(createOrUpdateEmployeeMessage, s => View());
+        [HttpPost]
+        public ActionResult Index(CreateOrUpdateEmployeeMessage message)
+        {
+            //var createOrUpdateEmployeeMessage = new CreateOrUpdateEmployeeMessage { EMail = "a", FirstName = "Alex", Infos = "", Id = 0, LastName = "Tank" };
+
+            return Command(message, s => View());
         }
 
         public ActionResult About()

@@ -4,6 +4,17 @@ using Jericho.Core.Commands;
 
 namespace Jericho.MVC
 {
+    public abstract class CommandResult : ActionResult
+    {
+
+        public override void ExecuteResult(ControllerContext context)
+        {
+            Execute(context);
+        }
+
+        protected abstract void Execute(ControllerContext context);
+    }
+
     public class CommandResult<TInput, TResult> : CommandResult
         where TInput : ICommandMessage
         where TResult : class
@@ -42,21 +53,15 @@ namespace Jericho.MVC
                     Success.ExecuteResult(context);
                     return;
                 }
-                modelState.AddModelError("*", String.Join(", ", executionResult.Errors));
+                foreach (var error in executionResult.Errors)
+                {
+                    foreach (var invalidProperty in error.InvalidProperties)
+                    {
+                        modelState.AddModelError(invalidProperty, error.ErrorMessage);
+                    }
+                }
             }
-            
             Failure.ExecuteResult(context);
         }
-    }
-
-    public abstract class CommandResult : ActionResult
-    {
-
-        public override void ExecuteResult(ControllerContext context)
-        {
-            Execute(context);
-        }
-
-        protected abstract void Execute(ControllerContext context);
     }
 }

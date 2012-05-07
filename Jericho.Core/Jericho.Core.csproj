@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reflector.cs" />
     <Compile Include="Commands\CommandHandlers\CreateOrUpdateEmployee.cs" />
     <Compile Include="Commands\CommandHandlers\TestCommandHandler.cs" />
     <Compile Include="Commands\CommandMessages\CreateOrUpdateEmployeeMessage.cs" />

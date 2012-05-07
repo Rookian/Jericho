@@ -17,6 +17,7 @@ namespace Jericho.CommandProcessor
         {
             var rules = _ruleFactory.Create(typeof(IRule<TCommandMessage>));
             var messagesRules = rules.Cast<IRule<TCommandMessage>>();
+
             return messagesRules.Select(messagesRule => messagesRule.Validate(commandMessage));
         }
     }

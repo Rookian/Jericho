@@ -13,12 +13,15 @@ namespace Jericho.CompositionRoot.Registries
             {
                 scan.AssembliesFromApplicationBaseDirectory();
                 scan.ConnectImplementationsToTypesClosing(typeof(ICommandHandler<>));
+                scan.ConnectImplementationsToTypesClosing(typeof (IRule<>));
             });
+
+            For<IRulesEngine>().Use<RulesEngine>();
+            For<IRuleFactory>().CreateFactory();
 
             For<ICommandInvoker>().Use<CommandInvoker>();
             For<ICommandHandlerFactory>().CreateFactory();
             For<ICommandProcessor>().Use<CommandProcessor.CommandProcessor>();
-            SetAllProperties(x=>x.OfType<ICommandProcessor>());
         }
     }
 }

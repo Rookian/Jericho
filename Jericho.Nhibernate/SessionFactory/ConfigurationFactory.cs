@@ -16,7 +16,7 @@ namespace Jericho.Nhibernate.SessionFactory
             return Fluently.Configure()
                 .Database(MsSqlConfiguration.MsSql2008.ConnectionString(c => c.Database(Database).TrustedConnection().Server(Server)))
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<TeamMap>())
-                .ExposeConfiguration(c => new SchemaExport(c).Execute(true, true, false))
+                //.ExposeConfiguration(c => new SchemaExport(c).Execute(true, true, false))
                 .BuildConfiguration();
         }
     }
