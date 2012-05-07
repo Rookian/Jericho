@@ -138,8 +138,4 @@
   <Module PersistentId="3C6A4946-3CD9-4B74-87C5-A06EF49920FA" ModuleId="StructureMap.AutoFactory_1" />
   <Module PersistentId="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.Core_1" />
   <Module PersistentId="StructureMap, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223" ModuleId="StructureMap_1" />
-  <Module PersistentId="Castle.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.Core_2" />
-  <Module PersistentId="Castle.DynamicProxy2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.DynamicProxy2" />
-  <Module PersistentId="Castle.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.Core_3" />
-  <Module PersistentId="Castle.DynamicProxy2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.DynamicProxy2_1" />
 </Modules>
