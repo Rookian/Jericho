@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Castle.Core.2.5.2\lib\NET35\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
@@ -53,6 +57,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Users\Alexander.Tank\Downloads\structuremap-structuremap-v2.6.3-23-gcd15ad0\structuremap-structuremap-cd15ad0\Source\StructureMap.AutoFactory\StructureMap.AutoFactory.csproj">
+      <Project>{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}</Project>
+      <Name>StructureMap.AutoFactory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Jericho.CommandProcessor\Jericho.CommandProcessor.csproj">
       <Project>{816841A1-E75C-480E-9843-E80555A40159}</Project>
       <Name>Jericho.CommandProcessor</Name>

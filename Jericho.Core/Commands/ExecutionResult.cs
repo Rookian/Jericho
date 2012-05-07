@@ -23,5 +23,21 @@ namespace Jericho.Core.Commands
         {
             return _result as T;
         }
+
+        public void Merge(IEnumerable<ExecutionResult> ruleResults)
+        {
+            foreach (var error in ruleResults.SelectMany(ruleResult => ruleResult.Errors))
+            {
+                Errors.Add(error);
+            }
+        }
+
+        public void Merge(ExecutionResult ruleResults)
+        {
+            foreach (var error in ruleResults.Errors)
+            {
+                Errors.Add(error);
+            }
+        }
     }
 }

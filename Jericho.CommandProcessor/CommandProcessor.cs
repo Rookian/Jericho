@@ -1,3 +1,4 @@
+using System.Linq;
 using Jericho.Core;
 using Jericho.Core.Commands;
 
@@ -7,25 +8,33 @@ namespace Jericho.CommandProcessor
     {
         readonly ICommandInvoker _commandInvoker;
         readonly IUnitOfWork _unitOfWork;
+        readonly IRulesEngine _rulesEngine;
 
-        public CommandProcessor(ICommandInvoker commandInvoker, IUnitOfWork unitOfWork)
+        public CommandProcessor(ICommandInvoker commandInvoker, IUnitOfWork unitOfWork, IRulesEngine rulesEngine)
         {
             _commandInvoker = commandInvoker;
             _unitOfWork = unitOfWork;
+            _rulesEngine = rulesEngine;
         }
 
         public ExecutionResult Process<TCommandMessage>(TCommandMessage commandMessage) where TCommandMessage : ICommandMessage
         {
-            // vorher könnte noch geprüft werden ob der Command überhaupt ausgeführt werden soll 
-            // (Validierung) neben der bereits durchgeführten ModelState.IsValid Prüfung, bspw. Prüfung auf Unique Name in der DB
-            var executionResult = _commandInvoker.Process(commandMessage);
-            
-            if (!executionResult.Successful)
+            var result = new ExecutionResult();
+            var ruleResults = _rulesEngine.ValidateMessage(commandMessage).ToList();
+            result.Merge(ruleResults);
+
+            if (result.Successful)
+            {
+                var executionResult = _commandInvoker.Process(commandMessage);
+                result.Merge(executionResult);
+            }
+
+            if (!result.Successful)
             {
                 _unitOfWork.RollBack();
             }
 
-            return executionResult;
+            return result;
         }
     }
 }

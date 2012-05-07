@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Jericho.Core.Commands;
 
@@ -7,9 +6,9 @@ namespace Jericho.CommandProcessor
 {
     public class CommandInvoker : ICommandInvoker
     {
-        private readonly Func<Type, IEnumerable<ICommandHandler>> _commandHandlerFactory;
+        private readonly ICommandHandlerFactory _commandHandlerFactory;
 
-        public CommandInvoker(Func<Type, IEnumerable<ICommandHandler>> commandHandlerFactory)
+        public CommandInvoker(ICommandHandlerFactory commandHandlerFactory)
         {
             _commandHandlerFactory = commandHandlerFactory;
         }
@@ -17,8 +16,9 @@ namespace Jericho.CommandProcessor
         public ExecutionResult Process<TCommandMessage>(TCommandMessage commandMessage) where TCommandMessage : ICommandMessage
         {
             var executionResult = new ExecutionResult();
-            var commandHandlerType = typeof(ICommandHandler<>).MakeGenericType(typeof(TCommandMessage));
-            var commandHandlers = _commandHandlerFactory(commandHandlerType).Cast<ICommandHandler<TCommandMessage>>();
+            var commandHandlerType = typeof(ICommandHandler<TCommandMessage>);
+            var handlers = _commandHandlerFactory.Create(commandHandlerType);
+            var commandHandlers = handlers.Cast<ICommandHandler<TCommandMessage>>();
 
             try
             {

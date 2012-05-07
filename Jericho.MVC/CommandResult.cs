@@ -8,11 +8,11 @@ namespace Jericho.MVC
         where TInput : ICommandMessage
         where TResult : class
     {
-        private readonly TInput _message;
-        private readonly Func<TResult, ActionResult> _success;
-        private readonly Func<TInput, ActionResult> _failure;
+        readonly TInput _message;
+        readonly Func<TResult, ActionResult> _success;
+        readonly Func<TInput, ActionResult> _failure;
         readonly ICommandProcessor _commandProcessor;
-        private TResult _result;
+        TResult _result;
 
         public ActionResult Success
         {
@@ -42,7 +42,9 @@ namespace Jericho.MVC
                     Success.ExecuteResult(context);
                     return;
                 }
+                modelState.AddModelError("*", String.Join(", ", executionResult.Errors));
             }
+            
             Failure.ExecuteResult(context);
         }
     }

@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{E0A59FA9-8BD6-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jericho.CommandProcessor", "Jericho.CommandProcessor\Jericho.CommandProcessor.csproj", "{816841A1-E75C-480E-9843-E80555A40159}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureMap.AutoFactory", "C:\Users\Alexander.Tank\Downloads\structuremap-structuremap-v2.6.3-23-gcd15ad0\structuremap-structuremap-cd15ad0\Source\StructureMap.AutoFactory\StructureMap.AutoFactory.csproj", "{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,16 @@ Global
 		{816841A1-E75C-480E-9843-E80555A40159}.Release|Mixed Platforms.Build.0 = Release|x86
 		{816841A1-E75C-480E-9843-E80555A40159}.Release|x86.ActiveCfg = Release|x86
 		{816841A1-E75C-480E-9843-E80555A40159}.Release|x86.Build.0 = Release|x86
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

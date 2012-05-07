@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Jericho.CommandProcessor;
+﻿using Jericho.CommandProcessor;
 using Jericho.Core.Commands;
-using StructureMap;
+using StructureMap.AutoFactory;
 using StructureMap.Configuration.DSL;
 
 namespace Jericho.CompositionRoot.Registries
@@ -19,8 +16,7 @@ namespace Jericho.CompositionRoot.Registries
             });
 
             For<ICommandInvoker>().Use<CommandInvoker>();
-            
-            For<Func<Type, IEnumerable<ICommandHandler>>>().Use(type => ObjectFactory.GetAllInstances(type).Cast<ICommandHandler>());
+            For<ICommandHandlerFactory>().CreateFactory();
             For<ICommandProcessor>().Use<CommandProcessor.CommandProcessor>();
             SetAllProperties(x=>x.OfType<ICommandProcessor>());
         }

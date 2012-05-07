@@ -22,8 +22,7 @@ namespace Jericho.Core.Commands.CommandHandlers
             employee.FirstName = commandMessage.FirstName;
             employee.Infos = commandMessage.Infos;
             employee.LastName = commandMessage.LastName;
-            
-            throw new OutOfMemoryException("Memory is what I need!!!");
+
             _employeeRepository.SaveOrUpdate(employee);
             return employee;
         }

@@ -36,6 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\CommandHandlers\CreateOrUpdateEmployee.cs" />
+    <Compile Include="Commands\CommandHandlers\TestCommandHandler.cs" />
     <Compile Include="Commands\CommandMessages\CreateOrUpdateEmployeeMessage.cs" />
     <Compile Include="Commands\Error.cs" />
     <Compile Include="Commands\ExecutionResult.cs" />

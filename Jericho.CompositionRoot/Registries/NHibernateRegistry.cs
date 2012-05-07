@@ -12,16 +12,9 @@ namespace Jericho.CompositionRoot.Registries
     {
         public NHibernateRegistry()
         {
-            // UnitOfWork
             For<IUnitOfWork>().Use<UnitOfWork>();
-            SetAllProperties(x => x.OfType<IUnitOfWork>());
-
-            // wird nicht mehr benötigt
-            //UnitOfWorkFactory.GetDefault = ObjectFactory.GetInstance<IUnitOfWork>;
-            var sessionFactory = new ConfigurationFactory().Build().BuildSessionFactory();
-
-            For<ISessionFactory>().Singleton().Use(sessionFactory);
-
+            For<ISessionFactory>().Singleton().Use(new ConfigurationFactory().Build().BuildSessionFactory());
+            
             For<ISession>().HttpContextScoped().Use(ctx =>
             {
                 var currentSessionFactory = ctx.GetInstance<ISessionFactory>();

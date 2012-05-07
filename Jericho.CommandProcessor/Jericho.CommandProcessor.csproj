@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CommandInvoker.cs" />
     <Compile Include="CommandProcessor.cs" />
+    <Compile Include="ICommandHandlerFactory.cs" />
     <Compile Include="ICommandInvoker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
