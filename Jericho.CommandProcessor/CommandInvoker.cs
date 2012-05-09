@@ -26,6 +26,7 @@ namespace Jericho.CommandProcessor
                 {
                     // Nur in dem jeweiligen Handler finden Datenänderungen statt
                     var result = commandHandler.Execute(commandMessage);
+                    // TODO !!!
                     executionResult.SetExecutionResult(result);
                 }
             }

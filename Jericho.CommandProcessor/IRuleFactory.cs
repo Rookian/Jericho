@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Jericho.Core.Rules;
 
 namespace Jericho.CommandProcessor
 {

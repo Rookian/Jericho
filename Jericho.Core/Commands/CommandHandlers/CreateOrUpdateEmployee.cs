@@ -1,5 +1,4 @@
-﻿using System;
-using Jericho.Core.Commands.CommandMessages;
+﻿using Jericho.Core.Commands.CommandMessages;
 using Jericho.Core.Domain;
 using Jericho.Core.Repositories;
 
@@ -26,5 +25,10 @@ namespace Jericho.Core.Commands.CommandHandlers
             _employeeRepository.SaveOrUpdate(employee);
             return employee;
         }
+    }
+
+    class MyClass
+    {
+         
     }
 }

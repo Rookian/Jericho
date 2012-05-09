@@ -1,7 +1,9 @@
 @{
     ViewBag.Title = "Home Page";
 }
-@model Jericho.Core.Commands.CommandMessages.CreateOrUpdateEmployeeMessage
+@model Jericho.MVC.Models.EmployeeViewModel
+
+
 @section featured {
     <section class="featured">
     <div class="content-wrapper">
@@ -17,10 +19,10 @@
     </div>
 </section>
 }
-<div style="display: block">
-    @using (@Html.BeginForm("Index", "Home"))
+<div>
+    @using (@Html.BeginForm("Index", "Home", FormMethod.Post))
     {
-        @Html.ValidationSummary(true, "Validierung")
+        @Html.ValidationSummary(true, "Could not create employee.")
         <fieldset>
             <legend>Felder</legend>
             <p>
@@ -51,7 +53,7 @@
 </div>
 <h3>
     We suggest the following:</h3>
-<ol class="round">
+@*<ol class="round">
     <li class="one">
         <h5>
             Configure ASP.NET Membership</h5>
@@ -72,8 +74,8 @@
         server. In <em>Solution Explorer</em>, right-click your project, select <em>Publish</em>,
         and choose one of the many options to get your code deployed and running on the
         web. </li>
-</ol>
-<section class="features">
+</ol>*@
+<section>
     <section class="feature">
         <img src="~/Images/aspNetHome.png" alt="" />
         <h3>Home of ASP.NET</h3>

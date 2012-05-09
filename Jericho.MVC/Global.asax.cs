@@ -36,6 +36,9 @@ namespace Jericho.MVC
         {
             AreaRegistration.RegisterAllAreas();
 
+            HtmlHelper.ClientValidationEnabled = true;
+            HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
+
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
 

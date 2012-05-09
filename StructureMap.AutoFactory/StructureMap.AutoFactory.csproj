@@ -70,9 +70,6 @@
     <Compile Include="ProxyFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\structuremap.snk">
-      <Link>Properties\structuremap.snk</Link>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

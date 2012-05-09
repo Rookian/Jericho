@@ -2,13 +2,19 @@
 using Jericho.Core;
 using Jericho.Core.Commands;
 using Jericho.Core.Commands.CommandMessages;
+using Jericho.Core.Repositories;
+using Jericho.MVC.Models;
 
 namespace Jericho.MVC.Controllers
 {
     public class HomeController : CommandController
     {
-        public HomeController(ICommandProcessor commandProcessor, IUnitOfWork unitOfWork) : base(commandProcessor, unitOfWork)
+        readonly IEmployeeRepository _employeeRepository;
+
+        public HomeController(ICommandProcessor commandProcessor, IUnitOfWork unitOfWork, IEmployeeRepository employeeRepository)
+            : base(commandProcessor, unitOfWork)
         {
+            _employeeRepository = employeeRepository;
         }
 
         public ActionResult Index()
@@ -17,21 +23,34 @@ namespace Jericho.MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(CreateOrUpdateEmployeeMessage message)
+        public ActionResult Index(EmployeeViewModel model)
         {
-            //var createOrUpdateEmployeeMessage = new CreateOrUpdateEmployeeMessage { EMail = "a", FirstName = "Alex", Infos = "", Id = 0, LastName = "Tank" };
-
-            return Command(message, s => View());
+            var createOrUpdateEmployeeMessage = new CreateOrUpdateEmployeeMessage { EMail = model.EMail, FirstName = model.FirstName, Id = model.Id, Infos = model.Infos, LastName = model.LastName };
+            return Command<CreateOrUpdateEmployeeMessage, EmployeeViewModel>(createOrUpdateEmployeeMessage, s => Index(), f => Contact(model));
         }
 
         public ActionResult About()
         {
-            return View();
+            return View("About");
         }
 
-        public ActionResult Contact()
+        public ActionResult Contact(EmployeeViewModel message)
         {
-            return View();
+            return View(message);
+            
+        }
+
+        public JsonResult IsMailUnique(string email)
+        {
+            var exists = _employeeRepository.Exists(x => x.EMail == email);
+
+            return Json(exists ? (object)"Gibt's schon!" : (object)true, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult IsEmployeeUnique(string FirstName, string LastName)
+        {
+            var exists = _employeeRepository.Exists(x => x.FirstName == FirstName, x => x.LastName == LastName);
+            return Json(!exists ? (object)true : (object)"Gibt's schon!", JsonRequestBehavior.AllowGet);
         }
     }
 }

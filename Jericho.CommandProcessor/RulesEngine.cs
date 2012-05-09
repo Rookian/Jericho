@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Jericho.Core.Commands;
+using Jericho.Core.Rules;
 
 namespace Jericho.CommandProcessor
 {
@@ -15,8 +16,8 @@ namespace Jericho.CommandProcessor
 
         public IEnumerable<ExecutionResult> ValidateMessage<TCommandMessage>(TCommandMessage commandMessage) where TCommandMessage : ICommandMessage
         {
-            var rules = _ruleFactory.Create(typeof(IRule<TCommandMessage>));
-            var messagesRules = rules.Cast<IRule<TCommandMessage>>();
+            var rules = _ruleFactory.Create(typeof(IRuleFor<TCommandMessage>));
+            var messagesRules = rules.Cast<IRuleFor<TCommandMessage>>();
 
             return messagesRules.Select(messagesRule => messagesRule.Validate(commandMessage));
         }

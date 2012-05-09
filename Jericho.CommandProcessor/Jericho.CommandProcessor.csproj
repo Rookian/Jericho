@@ -43,10 +43,8 @@
   <ItemGroup>
     <Compile Include="CommandInvoker.cs" />
     <Compile Include="CommandProcessor.cs" />
-    <Compile Include="EmployeeMustBeUnique.cs" />
     <Compile Include="ICommandHandlerFactory.cs" />
     <Compile Include="ICommandInvoker.cs" />
-    <Compile Include="IRule.cs" />
     <Compile Include="IRuleFactory.cs" />
     <Compile Include="IRulesEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,6 @@
-﻿using Jericho.Core.Domain;
+﻿using System;
+using System.Linq.Expressions;
+using Jericho.Core.Domain;
 
 namespace Jericho.Core.Repositories
 {
@@ -8,5 +10,7 @@ namespace Jericho.Core.Repositories
         T[] GetAll();
         T GetById(object id);
         void SaveOrUpdate(T enity);
+        bool IsUnique(int id, params Expression<Func<T, bool>>[] properties);
+        bool Exists(params Expression<Func<T, bool>>[] properties);
     }
 }

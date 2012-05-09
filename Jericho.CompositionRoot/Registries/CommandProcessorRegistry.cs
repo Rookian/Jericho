@@ -1,5 +1,6 @@
 ﻿using Jericho.CommandProcessor;
 using Jericho.Core.Commands;
+using Jericho.Core.Rules;
 using StructureMap.AutoFactory;
 using StructureMap.Configuration.DSL;
 
@@ -13,7 +14,7 @@ namespace Jericho.CompositionRoot.Registries
             {
                 scan.AssembliesFromApplicationBaseDirectory();
                 scan.ConnectImplementationsToTypesClosing(typeof(ICommandHandler<>));
-                scan.ConnectImplementationsToTypesClosing(typeof (IRule<>));
+                scan.ConnectImplementationsToTypesClosing(typeof (IRuleFor<>));
             });
 
             For<IRulesEngine>().Use<RulesEngine>();

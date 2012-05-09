@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
+using System.Linq.Expressions;
 using Jericho.Core.Domain;
 using Jericho.Core.Repositories;
 using NHibernate;
@@ -32,6 +34,23 @@ namespace Jericho.Nhibernate.Repositories
         public virtual void SaveOrUpdate(T enity)
         {
             _session.SaveOrUpdate(enity);
+        }
+
+        public bool Exists(params Expression<Func<T, bool>>[] properties)
+        {
+            return _session.QueryOver<T>().CombinedWhere(properties).ToRowCountQuery().RowCount() > 0;
+        }
+
+        public bool IsUnique(int id, params Expression<Func<T, bool>>[] properties)
+        {
+            var rowCount = _session.QueryOver<T>().CombinedWhere(properties).ToRowCountQuery().RowCount();
+            // create
+            if (id == 0)
+            {
+                return rowCount == 0;
+            }
+            // update
+            return rowCount <= 1;
         }
     }
 }

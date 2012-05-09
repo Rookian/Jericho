@@ -6,7 +6,6 @@ namespace Jericho.MVC
 {
     public abstract class CommandResult : ActionResult
     {
-
         public override void ExecuteResult(ControllerContext context)
         {
             Execute(context);
@@ -55,6 +54,7 @@ namespace Jericho.MVC
                 }
                 foreach (var error in executionResult.Errors)
                 {
+                    if (error.InvalidProperties == null) continue;
                     foreach (var invalidProperty in error.InvalidProperties)
                     {
                         modelState.AddModelError(invalidProperty, error.ErrorMessage);

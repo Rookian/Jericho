@@ -1,3 +1,6 @@
+using System;
+using System.Linq;
+using System.Linq.Expressions;
 using Jericho.Core;
 using Jericho.Core.Domain;
 using NHibernate;
@@ -13,6 +16,11 @@ namespace Jericho.Nhibernate
             var totalCount = rowCountQuery.FutureValue<int>().Value;
 
             return new PagedList<T>(list, pageIndex, pageSize, totalCount);
+        }
+
+        public static IQueryOver<T, T> CombinedWhere<T>(this IQueryOver<T, T> source, params Expression<Func<T, bool>>[] predicates)
+        {
+            return predicates.Aggregate(source, (current, predicate) => current.Where(predicate));
         }
     }
 }
