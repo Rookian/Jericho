@@ -1,0 +1,24 @@
+﻿Code version: 6.1.1000.82
+Assembly name System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 mvid {21679291-00f3-45dc-aeff-9d5c327fc0b3}
+* ref mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {fcb9dac8-ae3a-4886-93b0-f4cd5b0db0be}
+* ref System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+  mvid {e332d723-1405-4f29-af8b-ce2050c10687}
+* ref System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {c08d55d3-6463-439d-b112-60f6502ec141}
+* ref System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {648e3712-aacd-4dfa-84d6-70c740f7d24e}
+* ref System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {0467f5c0-e463-4b2c-acc5-f718cb71f056}
+* ref Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {1862810a-8fc3-48e3-a3e7-8e7873816cbf}
+* ref System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {b1acf4e4-d5a6-452c-9276-e601578405f8}
+* ref Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+  mvid {86a0e22f-c201-4c9a-9f79-67dc9f32711c}
+* ref System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {8a666ee9-a433-415b-a0af-efefb727ad4f}
+* ref System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {255ac5d7-dd7d-4212-88d7-872d8bd8d028}
+* ref System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {3e988dc6-3fdb-4d11-b0a7-285e6c088e1b}

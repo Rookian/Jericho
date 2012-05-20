@@ -126,7 +126,6 @@
   <Module PersistentId="Jericho.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="Jericho.Core_1" />
   <Module PersistentId="Jericho.Nhibernate, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="Jericho.Nhibernate_1" />
   <Module PersistentId="Jericho.CompositionRoot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="Jericho.CompositionRoot_1" />
-  <Module PersistentId="StructureMap.AutoFactory, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223" ModuleId="StructureMap.AutoFactory" />
   <Module PersistentId="Jericho.MVC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="Jericho.MVC_1" />
   <Module PersistentId="System.Web.DynamicData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Web.DynamicData" />
   <Module PersistentId="System.Web.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Web.Entity" />
@@ -134,9 +133,7 @@
   <Module PersistentId="System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Workflow.ComponentModel" />
   <Module PersistentId="System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Workflow.Activities" />
   <Module PersistentId="System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Workflow.Runtime" />
-  <Module PersistentId="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="System.Web.WebPages.Deployment_1" />
   <Module PersistentId="3C6A4946-3CD9-4B74-87C5-A06EF49920FA" ModuleId="StructureMap.AutoFactory_1" />
   <Module PersistentId="StructureMap.AutoFactory, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" ModuleId="StructureMap.AutoFactory_2" />
-  <Module PersistentId="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc" ModuleId="Castle.Core_1" />
   <Module PersistentId="StructureMap, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223" ModuleId="StructureMap_1" />
 </Modules>

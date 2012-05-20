@@ -1,0 +1,61 @@
+﻿@model Jericho.MVC.Models.EmployeeViewModel
+<hgroup class="title">
+    <h1>
+        Create Employee</h1>
+</hgroup>
+@using (@Html.BeginForm("CreateEmployee", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary(true, "Could not create employee.")
+
+    <table id="createEmployeeTable">
+        <tbody>
+            <tr>
+                <td>
+                    @Html.LabelFor(x => x.FirstName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.FirstName)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(x => x.FirstName)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(x => x.LastName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.LastName)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(x => x.LastName)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(x => x.EMail)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.EMail)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(x => x.EMail)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(x => x.Infos)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.Infos)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(x => x.Infos)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        <input value="Save" type="submit" class="saveButton" />
+    </p>
+}

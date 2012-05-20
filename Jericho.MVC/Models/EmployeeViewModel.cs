@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
-using Jericho.Core.Repositories;
+using Jericho.Core.Domain;
 
 namespace Jericho.MVC.Models
 {
-    public class EmployeeViewModel :IValidatableObject
+    public class EmployeeViewModel 
     {
-        readonly IEmployeeRepository _employeeRepository;
 
         //[Remote("IsEmployeeUnique", "Home", "FirstName")]
         [Required(ErrorMessage = "Last name is required.")]
@@ -24,18 +22,18 @@ namespace Jericho.MVC.Models
         public virtual string Infos { get; set; }
         public int Id { get; set; }
 
-        public EmployeeViewModel(IEmployeeRepository employeeRepository)
+        public EmployeeViewModel()
         {
-            _employeeRepository = employeeRepository;
+            
         }
 
-        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        public EmployeeViewModel(Employee employee)
         {
-            var exists = _employeeRepository.Exists(x => x.LastName == LastName, x => x.FirstName == FirstName);
-            if (exists)
-            {
-                yield return new ValidationResult("Employee already exists");
-            }
+            LastName = employee.LastName;
+            FirstName = employee.FirstName;
+            EMail = employee.EMail;
+            Id = employee.Id;
+            Infos = employee.Infos;
         }
     }
 }

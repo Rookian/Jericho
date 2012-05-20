@@ -20,6 +20,8 @@ namespace Jericho.CompositionRoot.Registries
                                                                    return ObjectFactory.GetInstance(type);
                                                                };
 
+
+
             StructureMapDependencyResolver.CreateServices = type => ObjectFactory.GetAllInstances<object>().Where(s => s.GetType() == type);
             
         }

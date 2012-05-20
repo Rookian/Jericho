@@ -57,7 +57,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Users\Alexander.Tank\Downloads\structuremap-structuremap-v2.6.3-23-gcd15ad0\structuremap-structuremap-cd15ad0\Source\StructureMap.AutoFactory\StructureMap.AutoFactory.csproj">
+    <ProjectReference Include="..\StructureMap.AutoFactory\StructureMap.AutoFactory.csproj">
       <Project>{3C6A4946-3CD9-4B74-87C5-A06EF49920FA}</Project>
       <Name>StructureMap.AutoFactory</Name>
     </ProjectReference>

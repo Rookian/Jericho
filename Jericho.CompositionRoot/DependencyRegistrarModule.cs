@@ -1,9 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using Jericho.CompositionRoot.Registries;
 using StructureMap;
-using StructureMap.Configuration.DSL;
 
 namespace Jericho.CompositionRoot
 {
@@ -19,7 +16,7 @@ namespace Jericho.CompositionRoot
 
         public void Dispose() { }
 
-        private static void EnsureDependenciesRegistered()
+        private void EnsureDependenciesRegistered()
         {
             if (!_dependenciesRegistered)
             {
@@ -28,11 +25,12 @@ namespace Jericho.CompositionRoot
                     if (!_dependenciesRegistered)
                     {
                         ObjectFactory.ResetDefaults();
-                        ObjectFactory.Initialize(init => typeof(MVCRegistry).Assembly.GetTypes()
-                                                        .Where(type => typeof(Registry).IsAssignableFrom(type))
-                                                        .Select(Activator.CreateInstance)
-                                                        .Cast<Registry>().ToList()
-                                                        .ForEach(init.AddRegistry));
+                        ObjectFactory.Initialize(init => init.Scan(scan =>
+                        {
+                            scan.AssemblyContainingType<NHibernateRegistry>();
+                            scan.LookForRegistries();
+                        }));
+
                         _dependenciesRegistered = true;
                     }
                 }

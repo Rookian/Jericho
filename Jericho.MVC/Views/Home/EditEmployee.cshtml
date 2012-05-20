@@ -1,0 +1,36 @@
+﻿@model Jericho.MVC.Models.EmployeeViewModel
+
+<hgroup class="title">
+    <h1>
+        Edit Employee</h1>
+</hgroup>
+@using (@Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary(true, "Could not create employee.")
+    <fieldset>
+        <legend>Felder</legend>
+        <p>
+            @Html.ValidationMessageFor(x => x.FirstName)
+            @Html.LabelFor(x => x.FirstName)
+            @Html.TextBoxFor(x => x.FirstName)
+        </p>
+        <p>
+            @Html.ValidationMessageFor(x => x.LastName)
+            @Html.LabelFor(x => x.LastName)
+            @Html.TextBoxFor(x => x.LastName)
+        </p>
+        <p>
+            @Html.ValidationMessageFor(x => x.EMail)
+            @Html.LabelFor(x => x.EMail)
+            @Html.TextBoxFor(x => x.EMail)
+        </p>
+        <p>
+            @Html.ValidationMessageFor(x => x.Infos)
+            @Html.LabelFor(x => x.Infos)
+            @Html.TextBoxFor(x => x.Infos)
+        </p>
+    </fieldset>
+    <p>
+        <input value="Save" type="submit" />
+    </p>
+}

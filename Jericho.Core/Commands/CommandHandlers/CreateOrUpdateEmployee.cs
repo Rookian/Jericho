@@ -26,9 +26,4 @@ namespace Jericho.Core.Commands.CommandHandlers
             return employee;
         }
     }
-
-    class MyClass
-    {
-         
-    }
 }
